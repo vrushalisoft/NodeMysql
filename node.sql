@@ -1,0 +1,23 @@
+use nodemysql;
+
+CREATE TABLE IF NOT EXISTS `admin`(
+	`admin_id`INT NOT NULL AUTO_INCREMENT UNIQUE,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    PRIMARY KEY(`admin_id`)
+);
+
+CREATE TABLE IF NOT EXISTS `customers` (
+	`customerid` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`name` VARCHAR(255) NOT NULL,
+	`email` VARCHAR(255) NOT NULL UNIQUE,
+	PRIMARY KEY (`customerid`)
+);
+
+CREATE TABLE IF NOT EXISTS `subjects` (
+	`subjectId` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`subject` VARCHAR(255) NOT NULL,	
+	PRIMARY KEY (`subjectId`)
+);
+
